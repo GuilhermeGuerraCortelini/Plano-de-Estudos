@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('musicas_salvas', function (Blueprint $table) {
             $table->id();
-            $table->string('file_path');  // Caminho do arquivo MP3
-            $table->string('file_name');  // Nome do arquivo MP3
+            $table->string('nome');  // Nome do arquivo MP3
+            $table->string('caminho');  // Caminho do arquivo MP3
             $table->timestamps();
         });
     }
