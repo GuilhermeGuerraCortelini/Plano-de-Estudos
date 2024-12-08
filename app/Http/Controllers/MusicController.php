@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class MusicController extends Controller
 {
+
     // Criar playlist
     public function createPlaylist(Request $request)
     {
@@ -46,7 +47,14 @@ class MusicController extends Controller
         $playlist = Playlist::with('songs')->findOrFail($playlistId);
         return response()->json($playlist);
     }
+    
+    public function getPlaylists()
+    {
+        // Retorna todas as playlists no banco de dados
+        $playlists = Playlist::all();
 
+        return response()->json($playlists);
+    }
     public function uploadSong(Request $request)
     {
         // Validação do arquivo
