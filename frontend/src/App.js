@@ -8,6 +8,20 @@ function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [playlistId, setPlaylistId] = useState('');
 
+//   const apiUrl = process.env.REACT_APP_API_URL;
+
+// axios.get(`${apiUrl}/playlists`)
+//   .then(response => {
+//     setPlaylists(response.data);
+//   })
+//   .catch(error => {
+//     console.error('Erro ao carregar playlists:', error);
+//   });
+
+
+{/* <source src={`http://localhost:8000/storage/${currentSong.file_path}`} type="audio/mp3" /> */}
+
+
   // Carregar playlists ao inicializar
   useEffect(() => {
     axios.get('http://localhost:8000/api/playlists')
