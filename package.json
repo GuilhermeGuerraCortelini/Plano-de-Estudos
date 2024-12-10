@@ -2,12 +2,14 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite"
+        "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
-        "axios": "^1.7.4",
+        "axios": "^1.7.9",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^1.0",
         "postcss": "^8.4.47",
@@ -16,6 +18,9 @@
     },
     "dependencies": {
         "cors": "^2.8.5",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-scripts": "^3.0.1",
         "web-vitals": "^4.2.4"
     }
 }
