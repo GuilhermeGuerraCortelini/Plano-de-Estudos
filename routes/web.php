@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\MusicController;
 use Illuminate\Support\Facades\Route;
 
-// Defina suas rotas aqui
+Route::prefix('api')->group(function () {
+    Route::get('playlists', [MusicController::class, 'getPlaylists']);
+    Route::post('playlist', [MusicController::class, 'createPlaylist']);
 
-Route::get('/', function () {
-    return view('welcome');
+    Route::post('playlist/{playlistId}/song', [MusicController::class, 'addSongToPlaylist']);
+    Route::get('playlist/{playlistId}/songs', [MusicController::class, 'getSongs']);
+    Route::post('playlist/upload-song', [MusicController::class, 'uploadSong']);
 });
-
